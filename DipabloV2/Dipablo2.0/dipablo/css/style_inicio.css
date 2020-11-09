@@ -1,0 +1,53 @@
+.card{
+	width: 100%;
+}
+
+.card-container{
+	margin: 0px;
+	padding: 0px;
+}
+
+.card-link:hover{
+	color: purple;
+	 background-color: rgba(0, 0, 0, 0.0);
+}
+
+.chart-container{
+	width: 100%;
+}
+
+#columnchart_material{
+	height: 330px;
+	width: 100%;
+}
+
+#piechart{
+	height: 330px; 
+	width: 100%;
+}
+
+
+
+/*@media (min-width: 576px) { 
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }*/
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+	#columnchart_material{
+		height: 330px;
+		width: 30px;
+	}
+
+	#piechart{
+		height: 330px; 
+		width: 60px;
+	}
+
+}

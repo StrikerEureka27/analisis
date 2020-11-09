@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Completa orden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+    <!-- Bootstrap CSS   -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Popper  -->
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- Favicons -->
+       <script src="https://kit.fontawesome.com/2d53938f2f.js" crossorigin="anonymous"></script>
+    <!-- Data table CSS-->
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>  
+    <!-- Data table JS-->
+       <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>   
+    <!-- Mis CSS    -->
+       <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- Apps JS    -->
+       <script type="text/javascript" src="script/carrito.js"></script> 
+       <script type="text/javascript" src="script/insertar-carrito.js"></script> 
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Menu lateral -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div id="logo-fila" class="row" >
+        <div class="col d-flex justify-content-center m-3 ">
+          <img id="logo" src="img/img4.png">
+        </div>
+      </div>
+      <div class="sidebar-heading text-white "> Di Pablo </div>
+      <div class="list-group list-group-flush">
+        <a href="inicio.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-home"></i> Inicio</a>
+        <a href="ingreso_orden.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-coins"></i> Ordenes</a>
+        <a href="ingreso_insumo.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-shopping-cart"></i> Compras</a>
+        <a href="ingreso_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-book"></i> Recetas</a>
+        <a href="#" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-file-invoice"></i> Facturación</a>
+        <a href="reporte_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="far fa-check-square"></i> Reportes</a>
+      </div>
+    </div>
+    <!-- /Termina menu lateral  -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    <!-- Botón lateral   -->
+    <div class="lateral row">
+      <div class="col-1 d-flex align-items-center" >
+          <button class="btn btn"  id="menu-toggle"></button>
+      </div>
+      <div class="col-10 container-fluid">
+        
+         <div class="container p-3">
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Actual Orden</span>
+        <div id="numero-reg" ></div>    
+      </h4>
+      <ul class="list-group mb-3">
+        <table class="table table-striped ">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">c/u</th>
+              <th scope="col">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody  id="template-table"></tbody>
+        </table>
+      </ul>
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h3 class="mb-3">Confirmar orden</h3>
+      <div id="todos" ></div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <form id="carrito" >
+            <label for="firstName">Telefono</label>
+            <input type="text" class="form-control"  id="telefono" placeholder=""  required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Celular <span class="text-muted">(Opcional)</span> </label>
+            <input type="text" class="form-control"  id="celular" placeholder=""  required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">        
+        </div>
+        <div class="mb-3">
+          <label for="address">Dirección</label>
+          <input type="text" class="form-control"  id="address" >
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+              <label for="exampleFormControlTextarea1">Descripción <span class="text-muted">(Opcional)</span></label>
+          <textarea class="form-control"  id="description" rows="3"></textarea>
+          </div>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Tipo de pago</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" value="tarjeta" type="radio" class="get_value custom-control-input" checked >
+            <label class="custom-control-label" for="credit">Tarjeta</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" value="efectivo" type="radio" class="get_value custom-control-input" >
+            <label class="custom-control-label" for="debit">Efectivo</label>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button  class="btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+      </form>
+    </div>
+  </div>
+      </div>
+    </div>
+    
+        
+
+      
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- Termina wrapper -->
+
+  <!-- JavaScript menu lateral -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+</html>

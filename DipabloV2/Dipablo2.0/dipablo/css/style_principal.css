@@ -1,0 +1,140 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url("../img/bg.png"); 
+}
+
+
+.aside{
+	height: 850px;
+	width: 18%;
+	padding-top: 30px;
+	/*background-color: #951934;*/ 
+	background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url("../img/aside.jpg");  
+	float: left;
+	margin-top: 0px;
+	box-shadow: 0px 2px 4px #701327; 
+}
+
+.aside ul li{
+
+	list-style: none;
+	padding: 30px;
+}
+
+nav ul li{
+	box-shadow: 0px  1px white; 
+}
+
+
+nav ul :hover{
+	background-color: black; 
+	color: white;
+}
+
+
+.aside ul li a{
+	font-family: 'Rubik', sans-serif;
+	font-style: bold;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+
+
+#logo{
+	width: 200px;
+    height: 200px;
+    border: 1px solid white;
+}
+
+.contenido{
+	width: 85%;
+    height: 781px;
+    padding-top: 50px;
+    margin-left: 303px;
+    padding-right: 250px;
+}
+
+.welcome1{
+	position: relative;
+	width: 85%;
+	height: 80px;
+	margin-left: 303px;
+	margin-bottom: 0px;
+	margin-top: -15px;
+}
+
+.welcome{
+	position: relative;
+	width: 85%;
+	height: 150px;
+	margin-left: 370px;
+	margin-bottom: 0px;
+	box-shadow: 4px 4px 4px 4px lightgray; 
+
+}
+
+.grafica img{
+	width: 300px;
+	height: 300px;
+	float: right;
+	margin: 25px;
+}
+
+.clearfix{
+	float: none;
+	clear: both;
+}
+
+
+h2{
+	position: absolute;
+	font-family: 'Rubik', sans-serif;
+    top: 10px;
+    left: 345px;
+    right: 0px;
+}
+
+h4{
+	position: absolute;
+    top: 50px;
+    left: 346px;
+    right: 0px;
+}
+
+.search_bar{
+	width: 500px;
+	height: 50px;	
+	margin-top: 15px;
+	margin-left: 66px;
+	padding-top: 10px;
+}
+
+
+.status{
+	font-family: 'Rubik', sans-serif;
+	width: 346px;
+    height: 147px;
+    border-right: 1px solid lightgray;
+    float: left;
+    display: block;
+    text-align: left;
+    padding: 5px;
+}
+
+.status p{
+	font-size: 25px;
+}
+
+.porcentaje{
+	color: green;
+}
+
+.welcome :hover{
+	background-color: rgba(192, 192, 192, 0.267);
+}

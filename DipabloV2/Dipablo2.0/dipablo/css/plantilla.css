@@ -1,0 +1,23 @@
+h1{
+	color: white;
+}
+
+#menu{
+	height: 50px;
+}
+
+
+#menu ul{
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	line-height: 50px;
+}
+
+footer{
+	color: white;
+}
+
+#elemento{
+	height: 50px;
+}

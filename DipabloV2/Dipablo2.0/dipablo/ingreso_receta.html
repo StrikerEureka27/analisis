@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mi pagina web</title>
+	<!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>   
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Data table CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>  
+    <!-- Data table JS-->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script> 
+    <!-- Mi css -->
+    <link rel="stylesheet" href="css/modal2.css">
+    <link rel="stylesheet" href="css/simple-sidebar.css">
+    <!-- mi js -->
+    <script src="script/tabla.js"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/2d53938f2f.js" crossorigin="anonymous"></script>
+    <!-- Iniciar modal -->
+    <script>
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
+    </script>
+    <!-- table -->
+    <script type="text/javascript">
+        //tabla izquierda
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "info": false,
+                "ordering": false,
+                "paging": false,
+                "searching": false,
+               
+            });  
+        });
+        //tabla derecha
+        $(document).ready(function() {
+            $('#datos').DataTable({
+                
+                "paging": false,
+                "searching": false,
+                "ordering": false,
+            });
+        });
+    </script>
+</head>
+<body>
+	<div class="d-flex" id="wrapper">
+
+        <!-- Menu lateral -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+          <div id="logo-fila" class="row" >
+            <div class="col d-flex justify-content-center m-3 ">
+              <img id="logo" src="img/img4.png">
+            </div>
+          </div>
+          <div class="sidebar-heading text-white "> Di Pablo </div>
+          <div class="list-group list-group-flush">
+            <a href="inicio.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-home"></i> Inicio</a>
+            <a href="ingreso_orden.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-coins"></i> Ordenes</a>
+            <a href="ingreso_insumo.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-shopping-cart"></i> Compras</a>
+            <a href="ingreso_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-book"></i> Recetas</a>
+            <a href="#" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-file-invoice"></i> Facturación</a>
+            <a href="reporte_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="far fa-check-square"></i> Reportes</a>
+          </div>
+        </div>
+        <!-- /Termina menu lateral  -->
+    
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+    
+        <div class="lateral row">
+          <div class="col-1 d-flex align-items-center" >
+              <button class="btn btn-sidebar"  id="menu-toggle"></button>
+          </div>
+          <div class="col-11 container-fluid p-4 pr-4 ">
+            <form action="" id="Form_Act" enctype="multipart/form-data" >
+            <div class="">
+                <div class="row">
+                    <div class="col-12 col-lg-4 col-md-5 separara">
+                        <div class="form-row">
+                            <div class="col-12">
+                                <input type="text" id="id" name="id" class="form-control">
+                                <label for=""><h4>Nombre del Producto</h4></label>
+                                <input type="text" id="nom" name="nom" readonly="readonly" class="form-control txtinvisible " placeholder="Nombre del producto" disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for=""><h5>No. Porcion</h5></label>
+                                <input type="text" id="num" name="num" readonly="readonly" class="form-control txtinvisible" placeholder="No." disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for=""><h5>Tamaño</h5></label>
+                                <input type="text" id="tam" name="tam" readonly="readonly" class="form-control txtinvisible" placeholder="Tamaño" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-12 separara">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <label for=""><h5>Margen de error</h5></label>
+                                <input type="text" id="por" name="por" readonly="readonly" class="form-control txtinvisible" placeholder="Cantidad" disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for=""><h5>Costo Materia Prima</h5></label>
+                                <input type="text" id="cosM" name="cosM" class="form-control txtinvisible" placeholder="Cantidad" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row pt-1">
+                            <div class="col-6">
+                                <label for=""><h5>Costo total</h5></label>
+                                <input type="text" id="cosT" name="cosT" class="form-control txtinvisible" placeholder="Cantida" disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for=""><h5>Cost por porcion</h5></label>
+                                <input type="text" id="cosP" name="cosP" class="form-control txtinvisible" placeholder="Cantidad" disabled>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                   <div class="col-lg-2 col-md-12 col-12 separara">
+                        <!-- button llama moda -->
+                        <div class="">
+                            <div class="row">
+                                <div class="col-lg-12 mt-1 col-md-4 col-12" >
+                                    <button type="button" class="btn btn-primary btn-sm  btn-block" onclick="Ocultar()" data-toggle="modal" data-target="#myModal">
+                                       <i class="fas fa-sync-alt"></i> Cambiar
+                                    </button>
+                                </div>
+                                <div class="col-lg-12 mt-1 col-md-4 col-12">
+                                    <button type="button" class="btn btn-success btn-sm  btn-block" onclick="Actualizar()" >
+                                       <i class="fas fa-save"></i> Guardar
+                                    </button>
+                                </div>
+                                <div class="col-lg-12 mt-1 col-md-4 col-12">
+                                    <button type="button" class="btn btn-warning btn-sm  btn-block " data-toggle="modal" data-target="#myModal">
+                                        <i class="fas fa-plus-circle"></i> Nuevo 
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <hr>
+    
+            <!-- tablas -->
+            
+            <div class="row p-3">
+                <div class="col-xl-6 mt-1 col-12">
+                    <h4>Productos existentes</h4>
+                    <table id="example" class="table table-responsive-sm  table-dark table-hover ">
+                        <thead class="">
+                            <tr>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Existencia</th>   
+                                    <th scope="col">Medida</th>
+                                    <th scope="col">Agregar</th>
+                                </tr>
+                            </tr>
+                        </thead>
+                        <tbody id="productos">
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="separara" class="col-xl-6 mt-2 col-12">
+                    <h4>Datos seleccionados</h4>
+                    <table id="productoselect"  class="table table-hover table-responsive-sm table-dark ">
+                        <thead class="danger">
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>   
+                                <th scope="col">Medidas</th>
+                                <th scope="col">C/Unitario</th>
+                                <th scope="col">Eliminar</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <input type="text" id="id3" name="id3" class="form-control" >
+                        </tbody>
+                      
+                    </table>
+                </div>
+            </div>
+                
+           
+            <div class="bs-example">
+                <div id="myModal" class="modal fade" data-backdrop="static"  tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                                <form action="" id="formModal" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-sm-5 margen">
+                                            <h1 class="titulo">Receta</h1>
+                                            <div class="form-row">
+                                                <input type="text" id="id2" name="id2" class="form-control">
+                                                <label for="">Nombre de la receta</label>
+                                                <input type="text" id="nom2" name="nom2" class="form-control texbox-mod" required>
+                                            </div>
+                                            <br>
+                                            <div class="form-row">
+                                                <label for="">No. Posición</label>
+                                                <input type="text" id="num2" name="num2" class="form-control texbox-mod"required>
+                                            </div>
+                                            <br>
+                                            <div class="form-row">
+                                                <label for="">Tamaño de la posición</label>
+                                                <select id="tam2" name="tam2" class="form-control texbox-mod">
+                                                    <option selected>Pequeño</option>
+                                                    <option>Mediano</option>
+                                                    <option>Grande</option>
+                                                </select>
+                                            </div>
+                                            <br>
+                                            <div class="form-row">
+                                                <label for="">Margen de error</label>
+                                                <input type="text" id="por2" name="por2" class="form-control texbox-mod" placeholder="%" required>
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="col-sm-7 margen fondo">
+                                            <div class="form-row tam">
+                                                <div class="custom-file mw-100">
+                                                    <input type="file" class="custom-file-input" name="fileImg" id="fileImg" accept="image/*">
+                                                    <label class="custom-file-label" for="customFileLang">Seleccionar Imagen</label>
+                                                    <br>
+                                                </div>
+                                                <div id="imagenPreview" class="col" >
+                                                    <img src="" alt="" class="mostrarimg img-thumbnail">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="from-row fixed-bottom position-absolute pb-6">
+                                                <button type="submit" class="btn btn-color" id="Modificar" onclick="ModificarReseta()" data-dismiss="modal">Modificar</button>
+                                            </div>
+                                            <div class="from-row fixed-bottom position-absolute">
+                                                <button type="submit" class="btn btn-color" id="Inseratar" onclick="enviarTexto()" data-dismiss="modal">Guardar</button>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+         <!-- Termina barra de navegación -->
+
+      
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+
+
+
+        <!-- Previa imagen -->
+        <script type="text/javascript">
+            const inpFile= document.getElementById("fileImg");
+            const previewContainer = document.getElementById("imagenPreview");
+            const previewImage = previewContainer.querySelector(".mostrarimg");
+    
+            inpFile.addEventListener("change", function(){
+                const file= this.files[0];
+                
+                if(file){
+                    const reader = new FileReader();
+                    reader.addEventListener("load", function(){
+                        previewImage.setAttribute("src", this.result);
+                    });
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+        <!-- JavaScript menu lateral -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+            
+</body>
+</html>

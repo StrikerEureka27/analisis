@@ -1,0 +1,41 @@
+
+.card{
+    width: 350px;
+    height: 40%;
+}
+
+.card-img-top{
+    height: 250px;
+}
+
+.card-imit{
+    width: 100%;
+    height: 100%;
+}
+
+#btn-izq{
+	/* margin-left: 10px; */
+	width: 10%;
+	height: 10%;
+}
+
+#btn-der{
+	/* margin-right: 10px; */
+	width: 10%;
+	height: 10%;
+}
+
+
+#btn-reg{
+	width: 20%;
+}
+
+#btn-buy{
+	width: 20%;
+}
+
+.card{
+	margin-left: 5%;
+	margin-right: 10%;
+}
+

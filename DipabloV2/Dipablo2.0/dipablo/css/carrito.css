@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+body{
+	background-image: url("../img/bg.png"); 
+}
+
+
+.container{
+	padding: 40px;
+	/*border: 1px solid black;*/
+}

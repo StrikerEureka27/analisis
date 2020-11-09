@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Plantilla</title>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>   
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- Data table CSS-->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>   -->
+  <!-- Data table JS-->
+  <!-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>  -->
+  <!-- Mi css -->
+  <link rel="stylesheet" href="css/modal2.css">
+  <link rel="stylesheet" href="css/simple-sidebar.css">
+  <!-- mi js -->
+  <script src="script/inventario.js"></script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/2d53938f2f.js" crossorigin="anonymous"></script>
+
+  
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Menu lateral -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div id="logo-fila" class="row" >
+        <div class="col d-flex justify-content-center m-3 ">
+          <img id="logo" src="img/img4.png">
+        </div>
+      </div>
+      <div class="sidebar-heading text-white "> Di Pablo </div>
+      <div class="list-group list-group-flush">
+        <a href="inicio.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-home"></i> Inicio</a>
+        <a href="ingreso_orden.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-coins"></i> Ordenes</a>
+        <a href="ingreso_insumo.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-shopping-cart"></i> Compras</a>
+        <a href="ingreso_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-book"></i> Recetas</a>
+        <a href="#" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-file-invoice"></i> Facturación</a>
+        <a href="reporte_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="far fa-check-square"></i> Reportes</a>
+      </div>
+    </div>
+    <!-- /Termina menu lateral  -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    <!-- Botón lateral   -->
+    <div class="lateral row">
+      <div class="col-1 d-flex align-items-center" >
+          <button class="btn btn"  id="menu-toggle"></button>
+      </div>
+      <div class="col-11 p-4 container-fluid">
+        <!-- Contenido -->
+        <h1>Reporte de Insumos</h1>
+    
+        <table class ="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRE INSUMO</th>
+                <th scope="col">MARCA</th>
+                <th scope="col">CANTIDAD</th>
+                <th scope="col">PRECIO</th>
+                <th scope="col">MEDIDA</th>
+              </tr>
+            </thead>
+            <tbody id="tablaizq"></tbody>
+          </table> 
+      </div>
+    </div>
+    
+        
+
+      
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- Termina wrapper -->
+
+  <!-- JavaScript menu lateral -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+</html>

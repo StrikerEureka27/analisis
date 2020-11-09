@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Plantilla</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+    <!-- Bootstrap CSS   -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Popper  -->
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- Favicons -->
+       <script src="https://kit.fontawesome.com/2d53938f2f.js" crossorigin="anonymous"></script>
+    <!-- Data table CSS-->
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>  
+    <!-- Data table JS-->
+       <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>   
+    <!-- Mis CSS    -->
+       <link href="css/simple-sidebar.css" rel="stylesheet">
+       <link rel="stylesheet" href="css/stylegastos.css">
+    <!-- Apps JS    -->
+       
+
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Menu lateral -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div id="logo-fila" class="row" >
+        <div class="col d-flex justify-content-center m-3 ">
+          <img id="logo" src="img/img4.png">
+        </div>
+      </div>
+      <div class="sidebar-heading text-white "> Di Pablo </div>
+      <div class="list-group list-group-flush">
+        <a href="inicio.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-home"></i> Inicio</a>
+        <a href="ingreso_orden.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-coins"></i> Ordenes</a>
+        <a href="ingreso_insumo.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-shopping-cart"></i> Compras</a>
+        <a href="ingreso_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-book"></i> Recetas</a>
+        <a href="#" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="fas fa-file-invoice"></i> Facturación</a>
+        <a href="reporte_receta.html" class="list-group-item list-group-item-action text-white bg-danger bg-transparent"><i class="far fa-check-square"></i> Reportes</a>
+      </div>
+    </div>
+    <!-- /Termina menu lateral  -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    <!-- Botón lateral   -->
+    <div class="lateral row">
+      <div class="col-1 d-flex align-items-center" >
+          <button class="btn btn"  id="menu-toggle"></button>
+      </div>
+      <div class="col-11 container-fluid">
+         
+        <div class="container">
+            <h3>Gastos Fijos</h3>
+            <hr>
+            <nav class="navbar navbar-light">
+              <form class="form-inline">
+                 <div class="gastosexplotacion">
+               <span class="input-group-text" id="basic-addon1" style="color: white;"><strong>Gastos de Explotación</strong></span>
+                 </div>
+              </form>
+           </nav>
+<!-------------------------------- GASTOS DE EXPLOTACION ---------------------------------->
+
+     <table class="table">
+     
+         <thead>
+
+              <tr>
+                 <th>Datos</th>
+                 <th>Mensual</th>
+                 <th>Trimestral</th>
+                 <th>Anual</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td data-label="Datos">Luz</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Agua</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Gas</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Leña</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td bgcolor="92D050" data-label="Datos"><strong>Total</strong></td>
+                 <td bgcolor="92D050" data-label="Mensual"><input></input></td>
+                 <td bgcolor="92D050" data-label="Trimestral"><input></input></td>
+                 <td bgcolor="92D050" data-label="Anual"><input></input></td>
+             </tr>
+         </tbody>
+     </table>
+
+<!-------------------------------- GASTOS ADMINISTRATIVOS ---------------------------------->
+
+<nav class="navbar navbar-light">
+              <form class="form-inline">
+                 <div class="gastosexplotacion">
+               <span class="input-group-text" id="basic-addon1" style="color: white;"><strong>Gastos Administravios</strong></span>
+                 </div>
+              </form>
+           </nav>
+
+     <table class="table">
+     
+         <thead>
+
+              <tr>
+                 <th>Datos</th>
+                 <th>Mensual</th>
+                 <th>Trimestral</th>
+                 <th>Anual</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td data-label="Datos">Productos</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Papelería</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td bgcolor="92D050" data-label="Datos"><strong>Total</strong></td>
+                 <td bgcolor="92D050" data-label="Mensual"><input></input></td>
+                 <td bgcolor="92D050" data-label="Trimestral"><input></input></td>
+                 <td bgcolor="92D050" data-label="Anual"><input></input></td>
+             </tr>
+         </tbody>
+     </table>
+
+<!-------------------------------- GASTOS DE EMPLEADOS (SALARIOS) ---------------------------------->
+
+<nav class="navbar navbar-light">
+              <form class="form-inline">
+                 <div class="gastosexplotacion">
+               <span class="input-group-text" id="basic-addon1" style="color: white;"><strong>Gastos de empeados (SALARIOS)</strong></span>
+                 </div>
+              </form>
+           </nav>
+
+     <table class="table">
+     
+         <thead>
+
+              <tr>
+                 <th>Datos</th>
+                 <th>Mensual</th>
+                 <th>Trimestral</th>
+                 <th>Anual</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td data-label="Datos">Jefe de restaurante</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Mirsa</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Doña Lesbia</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td data-label="Datos">Samuel</td>
+                 <td data-label="Mensual"><input></input></td>
+                 <td data-label="Trimestral"><input></input></td>
+                 <td data-label="Anual"><input></input></td>
+             </tr>
+             <tr>
+                 <td bgcolor="92D050" data-label="Datos"><strong>Total</strong></td>
+                 <td bgcolor="92D050" data-label="Mensual"><input></input></td>
+                 <td bgcolor="92D050" data-label="Trimestral"><input></input></td>
+                 <td bgcolor="92D050" data-label="Anual"><input></input></td>
+             </tr>
+         </tbody>
+     </table>
+
+<!-------------------------------- TOTAL GASTO---------------------------------->
+
+     <table class="table">
+     
+         <thead>
+
+              <tr>
+                 <th></th>
+                 <th>Mensual</th>
+                 <th>Trimestral</th>
+                 <th>Anual</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td bgcolor="92D050" data-label="Datos"><strong>Total Gasto</strong></td>
+                 <td bgcolor="92D050" data-label="Mensual"><input></input></td>
+                 <td bgcolor="92D050" data-label="Trimestral"><input></input></td>
+                 <td bgcolor="92D050" data-label="Anual"><input></input></td>
+             </tr>
+         </tbody>
+     </table>
+
+<!-------------------------------- PUNTO DE EQUILIBRIO---------------------------------->
+
+     <table class="table">
+     
+         <thead>
+
+              <tr>
+                 <th></th>
+                 <th>Mensual</th>
+                 <th>Trimestral</th>
+                 <th>Anual</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td bgcolor="92D050" data-label="Datos"><strong>Total Gasto</strong></td>
+                 <td bgcolor="92D050" data-label="Mensual"><input></input></td>
+                 <td bgcolor="92D050" data-label="Trimestral"><input></input></td>
+                 <td bgcolor="92D050" data-label="Anual"><input></input></td>
+             </tr>
+         </tbody>
+     </table>
+
+   <div class="equilibrio">
+    <br>
+    <div class="row">
+      <div class="col-4">
+            <div class="input-group mb-2">
+               <div class="input-group-prepend">
+            <div class="input-group-text" style="color: white;">Punto de equilibrio</div>
+               </div>
+           <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Valor">
+            </div>
+     </div>
+      
+      <div class="col-2">
+        <label>Q.00</label>
+      </div>
+
+    </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+   </div>
+      </div>
+    </div>
+    
+        
+
+      
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- Termina wrapper -->
+
+  <!-- JavaScript menu lateral -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+</html>

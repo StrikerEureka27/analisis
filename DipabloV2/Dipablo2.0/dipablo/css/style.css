@@ -1,0 +1,15 @@
+*{
+	margin: 0px auto;
+}
+
+
+.contenedor{
+	width: 450px;
+	height: 450px;
+    margin-top: 10%;
+    padding: 5px;
+    padding-top: 35px;
+    background-color: lightgray;
+    border-radius: 20px 20px 20px 20px; /* Redondear un borde */
+    box-shadow: 0px 0pc 4px black;
+}

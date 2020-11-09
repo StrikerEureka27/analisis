@@ -1,0 +1,157 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+
+
+.aside{
+	width: 20%;
+	height: 100%;
+	background-color: black;
+	float: left;
+	background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url("../img/aside.jpg");
+	box-shadow: 0px 2px 4px #701327; 
+}
+
+.aside ul li{
+
+	list-style: none;
+	padding: 30px;
+}
+
+nav ul li{
+	box-shadow: 0px  1px white; 
+}
+
+
+nav ul :hover{
+	background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)); 
+	color: white;
+}
+
+
+.aside ul li a{
+	font-family: 'Rubik', sans-serif;
+	font-style: bold;
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+
+
+.logo{
+    width: 200px;
+    height: 200px;
+    /*border: 1px solid white;*/
+    margin: 0px auto;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    margin-bottom: 20px; 
+}
+
+#container{
+	width: 1349px;
+	height: 800px;
+	background-color: white;
+	margin: 0px auto;
+}
+
+#contenido{
+	width: 80%;
+	height: 100%;
+	background-image: url("../img/bg.png");
+	margin-left: 20%; 
+}
+
+.clearfix{
+	float: none;
+	clear: both;
+}
+
+.search_bar{
+	width: 100%;
+	height: 50px;	
+	/*border: 1px solid black;*/
+	padding: 5px;
+	padding-left: 80px; 
+	padding-top: 10px;
+	margin-bottom: 10px; 
+}
+
+
+.welcome{
+	position: relative;
+    width: 85%;
+    height: 150px;
+    margin-left: 80px;
+    margin-bottom: 20px; 
+    box-shadow: 0px 0px 4px 4px lightgrey; 
+
+}
+
+
+.status{
+	font-family: 'Rubik', sans-serif;
+    width: 229px;
+    height: 147px;
+    border-left: 1px solid lightgray;
+    float: left;
+    display: block;
+    text-align: left;
+    padding: 5px;
+}
+
+.status p{
+	font-size: 25px;
+}
+
+.porcentaje{
+	color: green;
+}
+
+.table{
+	width: 10%;
+	height: 30px;
+	padding-top:10px;
+	padding-left: 76px;
+	padding-right: 76px;
+    /*border: 2px solid black;*/
+}
+
+#graf{
+	width: 50px;
+	height: 50px;
+}
+
+.titulo{
+    width: 200px;
+    margin-left: 10%;
+}
+
+.card:hover{
+    background-color: rgb(192, 192, 192);
+    width: 105%;
+    height: 105%;
+    color: rgb(80, 1, 1);
+    
+}
+
+.menu{
+	/*border: 1px solid black;*/
+	padding: 150px;
+	padding-top: 0px;
+}
+
+.card-columns{
+	overflow-y: hidden;
+}
+
+.receta{
+	padding: 20px;
+}
+
+.container{
+	padding: 20px;
+}

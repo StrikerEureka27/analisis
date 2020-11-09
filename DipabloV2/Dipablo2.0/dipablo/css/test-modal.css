@@ -1,0 +1,47 @@
+
+/* ---------- Estilos Generales de las Tarjetas ----------*/
+.tarjeta {
+	width: 150px;
+	max-width: 550px;
+	transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	cursor: pointer;
+	z-index: 2;
+	float: left;
+	
+}
+
+.tarjeta.active {
+	transform: rotateY(180deg);
+}
+
+.tarjeta > div {
+	margin: 10px;
+	border-radius: 15px;
+	min-height: 315px;
+	box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+	float: left;
+}
+
+/* ---------- Tarjeta Delantera ----------*/
+
+.tarjeta .delantera {
+	width: 100%;
+	background: url(../img/69.jpg);
+	background-size: cover;
+}
+
+
+
+
+
+/* ---------- Tarjeta Trasera ----------*/
+.trasera {
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
